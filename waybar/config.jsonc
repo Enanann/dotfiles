@@ -1,0 +1,185 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 20,
+
+    // "width": 1280, // Waybar width
+
+
+
+
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "custom/padd", "custom/al_end", "custom/spotify", "custom/ar_end", "custom/padd"],
+    "modules-center": ["clock"],
+    "modules-right": [/*"tray",*/ "custom/padd", "custom/l_end", "network", "bluetooth", "pulseaudio", "custom/r_end", "custom/sl_end", "cpu", "temperature","custom/sr_end", "custom/cl_end", "battery", "backlight", "custom/cr_end", "custom/padd", "custom/wlogout"],
+
+    "hyprland/workspaces": {
+		"format" : "{icon}",
+		"format-icons": {
+			"active" : "󱨇",
+			"default":"",
+		},
+		
+		"disable-scroll": true,
+		"rotate": 0,
+		"all-outputs": true,
+		"active-only": false,
+		"on-click": "activate",
+		"persistent-workspaces": {
+			"*": 4,
+		}
+	},
+/*
+	"tray": {
+		"icon-size": 21,
+    	"spacing": 10
+	},
+*/
+
+/*
+	"custom/al_end": {
+		"format": " ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+	"custom/ar_end": {
+		"format": " ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+	"custom/spotify": {
+		"format": " ",
+		"interval": "once",
+		"tooltip": false,
+		"on-click": "brave --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime 'https://open.spotify.com/' & disown"
+	},
+
+*/
+
+	"clock": {
+			"format": "    {:%H:%M   󰃭   %d • %m • %y}   "
+	},
+
+	"battery": {
+		"state": {
+			"good": 95,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": ["󰁺", "󰁼", "󰁾", "󰂁", "󰁹"],
+		"format-charging": "󰂄 {capacity}%",
+		"interval": 3
+	},
+
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "{icon}   {percent}%",
+		"format-icons": ["", ""]
+    },
+
+    "cpu": {
+		"format": "    {usage}%"
+    },
+
+	"temperature": {
+		"format": "{temperatureC}°C"
+	},
+
+    "network": {
+    	"tooltip": true,
+    	"format-wifi": "",
+    	"rotate": 0,
+    	"format-ethernet": "󰈀",
+    	"tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    	"format-linked": "󰈀 {ifname} (No IP)",
+    	"format-disconnected": "󰖪",
+    	"tooltip-format-disconnected": "Disconnected",
+    	"format-alt": "<span foreground='#74c7ec'>  {bandwidthDownBytes}</span> <span foreground='#89b4fa'>   {bandwidthUpBytes}</span>",
+    	"interval": 2,
+    },
+
+    "bluetooth": {
+	    "format": "",
+	    "format-connected": "󰂱",
+	    "format-disabled": "󰂲",
+	    "rotate": 0,
+	    "format-connected-battery": "{icon} {num_connections}",
+	    // "format-connected-battery": "{icon} {device_alias}-{device_battery_percentage}%",
+	    "format-icons": ["󰥇", "󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"],
+	    // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device If this config option is not defined or none of the devices in the list are connected, it will fall back to showing the last connected device.
+	    "tooltip-format": "{controller_alias}\n{num_connections} connected",
+	    "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
+	    "tooltip-format-enumerate-connected": "{device_alias}",
+	    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{icon} {device_battery_percentage}%"
+	},
+
+	"pulseaudio": {
+	    "format": "{icon}",
+	    "rotate": 0,
+	    "format-muted": "",
+	    "on-click": "pavucontrol -t 3",
+	    "tooltip-format": "{icon} {desc} // {volume}%",
+	    "scroll-step": 5,
+	    "format-icons": {
+	        "headphone": "",
+	        "hands-free": "",
+	        "headset": "",
+	        "phone": "",
+	        "portable": "",
+	        "default": ["", "", ""]
+	    }
+	},
+
+	"custom/l_end": {
+		"format": "    ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+	"custom/r_end": {
+		"format": "    ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+	"custom/sl_end": {
+		"format": "    ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+
+	"custom/sr_end": {
+		"format": "    ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+
+	"custom/cl_end": {
+		"format": "    ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+
+	"custom/cr_end": {
+		"format": "    ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+	"custom/padd": {
+		"format": " ",
+		"interval" : "once",
+		"tooltip": false
+	},
+
+	"custom/wlogout": {
+		"format": "󰃣",
+		"on-click": "wlogout"
+	}
+}
