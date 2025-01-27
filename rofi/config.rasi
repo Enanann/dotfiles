@@ -1,0 +1,95 @@
+configuration {               
+    modes: "window,run,drun";
+    display-drun: "Applications:";
+    display-window: "Window:";
+    font: "JetBrainsMono Nerd Font Medium 10";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: transparent;
+  bg-selected: #8889cc;
+
+  fg: #bac2de;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+/*---------------------------Window---------------------------*/
+
+window {
+    fullscreen: false;
+    transparency: "real";
+    cursor: "default";
+    background-color: black / 50%;
+    border: 1px;
+    border-radius: 10px;
+    border-color: #e4A8ca;
+}
+
+/*---------------------------Element---------------------------*/
+
+element {
+    padding: 8 12;
+    background-color: transparent;
+    children: [element-icon, element-text];
+    text-color: white;
+}
+
+element selected {
+    text-color: #89dceb;
+    background-color: @bg-selected;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 1.5em;
+    padding: 0 10 0 0;
+    background-color: transparent;
+}
+
+/*---------------------------Mainbox---------------------------*/
+
+mainbox {
+    children: [inputbar, listview];
+    background-color: @bg;
+}
+
+/*---------------------------Entry, Inputbar---------------------------*/
+
+entry {
+    padding: 12;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg;
+}
+
+/*---------------------------Listview---------------------------*/
+
+listview {
+    background-color: @bg;
+    columns: 2;
+    lines: 8;
+}
+
+/*---------------------------Prompt---------------------------*/
+
+prompt {
+    enabled: true;
+    padding: 12 0 0 12;
+    background-color: @bg;
+    text-color: @fg;
+}
