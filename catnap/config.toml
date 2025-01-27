@@ -1,0 +1,47 @@
+# This is the configuration file for catnap.
+# Here you can configure the stat colors,
+# stat names, stat icons and more!
+#
+# https://github.com/iinsertNameHere/catnap
+
+##############################################
+##          FetchInfo stats Config          ##
+##############################################
+[stats]
+username  = {icon = " ", name = "usr", color = "(RD)"}
+hostname  = {icon = " ", name = "hst", color = "(RD)"}
+uptime    = {icon = " ", name = "upt", color = "(MA)"}
+distro    = {icon = " ", name = "dst", color = "(MA)"}
+kernel    = {icon = " ", name = "ker", color = "(CN)"}
+desktop   = {icon = " ", name = "wm", color = "(CN)"}
+terminal  = {icon = " ", name = "trm", color = "(YW)"}
+shell     = {icon = " ", name = "shl", color = "(YW)"}
+# packages  = {icon = " ", name = "packages", color = "(RD)"}  # WARNING: Resource Intensive
+# gpu       = {icon = "󱔐 ", name = "gpu", color = "(MA)"}      # WARNING: Resource Intensive
+# cpu       = {icon = " ", name = "cpu", color = "(RD)"}
+# disk_0    = {icon = " ", name = "disk", color = "(GN)"}
+memory    = {icon = " ", name = "mem", color = "(BE)"}
+# battery    = {icon = " ", name = "battery", color = "(GN)"}
+# weather   = {icon = " ", name = "weather", color = "(BE)"} # Requires curl and an emoji font. | WARNING: Resource Intensive
+sep_color = "SEPARATOR"
+colors    = {icon = " ", name = "clr", color = "(CN)", symbol = " "}
+
+##############################################
+##               Misc Config                ##
+##############################################
+[misc]
+borderstyle = "line"
+layout = "Inline" # [Inline, ArtOnTop, StatsOnTop]
+stats_margin_top = 0
+
+[misc.figletLogos] # Requires Figlet.
+enable = false
+color  = "(YW)"
+font   = "slant"
+margin = [0, 0, 0,]
+
+[misc.imageMode] # Requires Viu.
+enable = true
+path   = "/home/enananfanboy/.config/catnap/ena-transparent.png" # Please only use absolute paths.
+scale  = 26
+margin = [0, 0, 0,]
