@@ -18,7 +18,17 @@
 
 ## Screenshots
 
-![[screenshot1.png]]
+<p align="center">
+  <img src="./screenshot/screenshot1.png" alt="Screenshot 1" width="75%" />
+</p>
+
+<p align="center">
+  <img src="./screenshot/screenshot2.png" alt="Screenshot 1" width="75%" />
+</p>
+
+<p align="center">
+  <img src="./screenshot/screenshot3.png" alt="Screenshot 1" width="75%" />
+</p>
 
 ![[screenshot2.png]]
 
